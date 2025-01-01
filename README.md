@@ -1,6 +1,6 @@
 # PML_Shinhan_Project
 2024-2 실용머신러닝 IC-PBL 금융 어플 리뷰 분석
-![image](https://github.com/user-attachments/assets/874707cc-f4c6-4fed-8844-844ce82f2daa)
+![image](https://github.com/user-attachments/assets/1188f764-fa26-447c-971c-c43df89327c7)
 
 ![image](https://github.com/user-attachments/assets/715b3da7-0824-4c08-8429-574d2afd0919)
 
