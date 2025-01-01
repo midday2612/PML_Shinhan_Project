@@ -1,0 +1,41 @@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v1.0.0.css">
+
+
+<div id="ldavis_el3931358347967402727363243477" style="background-color:white;"></div>
+<script type="text/javascript">
+
+var ldavis_el3931358347967402727363243477_data = {"mdsDat": {"x": [-0.0, 0.0, -0.0, 0.0, -0.0], "y": [0.0, -0.0, -0.0, -0.0, 0.0], "topics": [1, 2, 3, 4, 5], "cluster": [1, 1, 1, 1, 1], "Freq": [83.96622913924884, 4.008447185536348, 4.008446067949209, 4.008441597600651, 4.008436009664954]}, "tinfo": {"Term": ["\ub0b4\uc5ed", "\uac10\uc0ac", "\ud55c\uc815", "\ubd88\ud3b8", "\ubd88\ud3b8", "\ud55c\uc815", "\uac10\uc0ac", "\ub0b4\uc5ed", "\ub0b4\uc5ed", "\uac10\uc0ac", "\ud55c\uc815", "\ubd88\ud3b8", "\uac10\uc0ac", "\ub0b4\uc5ed", "\ud55c\uc815", "\ubd88\ud3b8", "\ud55c\uc815", "\ub0b4\uc5ed", "\uac10\uc0ac", "\ubd88\ud3b8", "\uac10\uc0ac", "\ub0b4\uc5ed", "\ubd88\ud3b8", "\ud55c\uc815"], "Freq": [0.0, 0.0, 1.0, 1.0, 0.839666557964911, 0.8396624540477404, 0.839660652328007, 0.8396595012292885, 0.040084489177212745, 0.04008447962033035, 0.04008450351253634, 0.040084410332932974, 0.04008499885128192, 0.04008491283936433, 0.04008395954061106, 0.04008396909749079, 0.04008517395518485, 0.040084710447034766, 0.04008414181332487, 0.04008362813161215, 0.04008454466342615, 0.040084382196878376, 0.04008446820858014, 0.040084035760857395], "Total": [0.0, 0.0, 1.0, 1.0, 1.000003033735527, 1.00000012681693, 0.9999988172763703, 0.9999979958897787, 0.9999979958897787, 0.9999988172763703, 1.00000012681693, 1.000003033735527, 0.9999988172763703, 0.9999979958897787, 1.00000012681693, 1.000003033735527, 1.00000012681693, 0.9999979958897787, 0.9999988172763703, 1.000003033735527, 0.9999988172763703, 0.9999979958897787, 1.000003033735527, 1.00000012681693], "Category": ["Default", "Default", "Default", "Default", "Topic1", "Topic1", "Topic1", "Topic1", "Topic2", "Topic2", "Topic2", "Topic2", "Topic3", "Topic3", "Topic3", "Topic3", "Topic4", "Topic4", "Topic4", "Topic4", "Topic5", "Topic5", "Topic5", "Topic5"], "logprob": [4.0, 3.0, 2.0, 1.0, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863, -1.3863], "loglift": [4.0, 3.0, 2.0, 1.0, 0.0, 0.0, -0.0, -0.0, 0.0, 0.0, 0.0, -0.0, 0.0, 0.0, -0.0, -0.0, 0.0, 0.0, -0.0, -0.0, 0.0, 0.0, -0.0, -0.0]}, "token.table": {"Topic": [1, 1, 1, 1], "Freq": [1.0000011827250286, 1.000002004114238, 0.9999969662736765, 0.999999873183086], "Term": ["\uac10\uc0ac", "\ub0b4\uc5ed", "\ubd88\ud3b8", "\ud55c\uc815"]}, "R": 4, "lambda.step": 0.01, "plot.opts": {"xlab": "PC1", "ylab": "PC2"}, "topic.order": [3, 1, 4, 2, 5]};
+
+function LDAvis_load_lib(url, callback){
+  var s = document.createElement('script');
+  s.src = url;
+  s.async = true;
+  s.onreadystatechange = s.onload = callback;
+  s.onerror = function(){console.warn("failed to load library " + url);};
+  document.getElementsByTagName("head")[0].appendChild(s);
+}
+
+if(typeof(LDAvis) !== "undefined"){
+   // already loaded: just create the visualization
+   !function(LDAvis){
+       new LDAvis("#" + "ldavis_el3931358347967402727363243477", ldavis_el3931358347967402727363243477_data);
+   }(LDAvis);
+}else if(typeof define === "function" && define.amd){
+   // require.js is available: use it to load d3/LDAvis
+   require.config({paths: {d3: "https://d3js.org/d3.v5"}});
+   require(["d3"], function(d3){
+      window.d3 = d3;
+      LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+        new LDAvis("#" + "ldavis_el3931358347967402727363243477", ldavis_el3931358347967402727363243477_data);
+      });
+    });
+}else{
+    // require.js not available: dynamically load d3 & LDAvis
+    LDAvis_load_lib("https://d3js.org/d3.v5.js", function(){
+         LDAvis_load_lib("https://cdn.jsdelivr.net/gh/bmabey/pyLDAvis@3.4.0/pyLDAvis/js/ldavis.v3.0.0.js", function(){
+                 new LDAvis("#" + "ldavis_el3931358347967402727363243477", ldavis_el3931358347967402727363243477_data);
+            })
+         });
+}
+</script>
